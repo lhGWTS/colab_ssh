@@ -123,7 +123,7 @@ def install_common_tool():
     config_bashrc()
     install_packages_microsoft_prod()
     install_apt_pkg()
-    install_fzf():
+    install_fzf()
     #install_nvtop()
     #install_pip_dependencies()
     #install_gdrive_rclone()
