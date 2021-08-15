@@ -2,7 +2,6 @@
 import time
 
 from colab_ssh.config import config_root_password, install_common_tool
-from colab_ssh.notification import send_notification_to_microsoft_teams
 from colab_ssh.ssh import config_ssh_server, parse_public_key
 from colab_ssh.tunel import config_argo_tunnel
 from colab_ssh.utils import check_gpu_available, get_instance_info
@@ -40,14 +39,6 @@ def setup_ssh(public_key, teams_webhook_address: str = None):
 
     # Config Argo Tunnel
     msg, ssh_command, hostname = config_argo_tunnel(msg)
-
-    # Send notification to Microsoft Teams
-    if teams_webhook_address is not None:
-        spec = get_instance_info()
-        spec['ssh_command'] = ssh_command
-        spec['hostname'] = hostname
-        send_notification_to_microsoft_teams(teams_webhook_address, spec)
-
     print(msg)
 
 
