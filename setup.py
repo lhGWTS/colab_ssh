@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 import os
 from setuptools import setup, find_packages
@@ -29,7 +30,7 @@ setup(
         exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     keywords=['ssh', 'colab'],
     python_requires='>=3',
-    py_modules=['ssh_colab'],
+    py_modules=['colab_ssh'],
     classifiers=[
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries',
