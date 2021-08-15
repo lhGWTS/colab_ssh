@@ -24,7 +24,7 @@ def install_apt_pkg():
     Install my own usefull package, won't explain more about why :P
     """
     apt_manager = AptManager()
-    apt.manager.update()
+    apt_manager.update()
     apt_manager.commit()
     #all_pkg = ['nano', 'htop', 'tmux', 'vim', 'cmake','fish','aria2',
     #           'libncurses5-dev', 'libncursesw5-dev', 'git',
