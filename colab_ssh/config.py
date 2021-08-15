@@ -30,7 +30,7 @@ def install_apt_pkg():
     #           'libncurses5-dev', 'libncursesw5-dev', 'git',
     #           'tree', 'zip', 'expect', 'pigz', 'pv']
     all_pkg = ['vim', 'cmake','fish','aria2','build-essential','htop',
-               'libncurses5-dev', 'libncursesw5-dev', 'git','file'
+               'libncurses5-dev', 'libncursesw5-dev', 'git','file',
                'tree', 'zip', 'expect', 'pigz', 'pv','zstd','powershell']
     apt_manager.install_pkg(*all_pkg)
     apt_manager.commit()
